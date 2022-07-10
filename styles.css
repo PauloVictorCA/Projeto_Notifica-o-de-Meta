@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+/*configurações padrões e definição da fonte do texto*/
+* {
+    font-family: 'Roboto', sans-serif;
+    /*Ver video sobre box-sizing*/
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+}
+
+/*Configurações iniciais do projeto*/
+body, html{
+    color: #FFFFFF;
+    background-color: #000000;
+    width: 100%;
+    max-width: 992px;
+}
+
+/*Configurações padrões do cabeçalho*/
+header{
+    height: 220px;
+    background: linear-gradient(180deg, #102347 0%, #181818 100%);
+}
+
+.dimensao-cabecalho{
+    /*display / flex-direction / align-items - são utilizados para centralizar as coisas no centro*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+           
+    padding: 28px 43px;
+       
+}
+
+/*Configuração da Imagem do cabeçalho*/
+.img-logo{
+    height: 106px;
+    width: 235px;
+}
+
+.dimensao-cabecalho h1{
+    margin-top: 15px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.dimensao-cabecalho p{
+    font-size: 14px;
+    font-weight: 300;
+}
+
+/*hover - quando você passa o mouse em cima / visited - quando você já visitou o site*/
+.conf-envio-GITHUB, conf-envio-GITHUB:hover, conf-envio-GITHUB:visited {
+    color: unset;
+    text-decoration: none;
+}
+
+
+
+
+/*------------------------------------*/
+/*Criando o espaçamento da Seção Principal*/
+.seção {
+    padding: 40px 10px;
+}
+
+/*Configurações Base do Card*/
+.dimensão-card{
+    width: 100%;
+    max-width: 900px;
+    /*Margin 0 auto centraliza o div ao centro*/
+    margin: 0 auto;
+    background-color: #283142;    /*card*/  
+    border-radius: 10px;  /*card*/   
+}
+
+/*Configurações iniciais dentro do Card*/
+.card{
+    padding: 30px 10px;
+    
+}
+
+.card h2{
+    color: #676FFF;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+/*Espaçamento entre as caixas*/    
+.dimensão-caixa {
+   margin-bottom: 16px;
+   
+}
+
+/*Todas as configurações da Caixa*/
+.conf-caixa{
+    height: 46px;    
+    background-color: #1B2531;
+    border: 1px solid #384459;
+    border-radius: 5px;
+    color: #9AAABE;
+    font-size: 18px;
+    font-weight: 400;
+    width: 100%;
+    max-width: 300px;   /*dimensão-caixa*/
+    padding: 0 21px;
+}
+
+.tabela{
+    width: 100%;
+    max-width: 823px; /*não coloco*/
+    border-spacing: 0;
+    /*Vé oque esse border-collapse faz pois ele é quem libera para aparecer o border-top da linha*/
+    border-collapse: collapse;
+}
+
+.tabela thead{
+    height: 55px;
+    font-weight: 400;
+    font-size: 16px;
+    font-weight: 400;
+    color: #E9E9E9;
+}
+
+
+
+/*Configuração da linha*/
+.tabela tbody { 
+    color: #CFCFCF;
+    /*Deixa o texto da tabela centralizado*/    
+    text-align: center;
+}
+
+/*Dimensões da Linha*/
+.tabela tbody tr{
+    font-size: 14px;
+    font-weight: 400;
+    height: 74px;
+    border-top: 1px solid #5F6E82;
+}
+
+/*Configuras a cor das linhas impares odd*/
+.tabela tbody tr:nth-child(odd){
+    background-color: #242C3B;
+}
+
+/*Muda a cor da Linha assim que passar o mouse*/
+.tabela tbody tr:hover{
+    background-color: #384459;
+}
+
+.centralizar-botão{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botao-img-tabela{
+    width: 45px;
+    height: 45px;
+    border: 1px solid #FF6B72;
+    border-radius: 10px;
+    /*Alinhou a imagem ao centro*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*vira uma maozinha quando colocar o mouse dentro*/
+    cursor: pointer;
+    
+}
+
+.botao-img-tabela img{
+    width: 18.89px;
+    height: 21.34px;
+    
+}
+
+/*Configurando quando a tela aumentar aparecer mais informações*/
+
+.tamanho-576{
+    /*Display none não mostra ele*/
+    display: none;
+}
+
+/*quando chega no tamanho 576 fica visivel*/
+@media (min-width: 576px){
+    .tamanho-576{
+        display: table-cell;
+    }
+    .card{
+        padding: 30px 35px;
+    }
+    .tabela tbody tr{
+        font-size: 18px;
+        height: 62px;
+    }
+}
+
+.tamanho-992{
+    display: none;
+}
+
+@media (min-width: 992px){
+    .tamanho-992{
+        display: table-cell;
+    }
+    .card{
+        padding: 30px 35px;
+    }
+    .tabela tbody tr{
+        font-size: 18px;
+        height: 62px;
+    }
+}
